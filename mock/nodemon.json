@@ -1,0 +1,19 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/*"
+  ],
+  "verbose": true,
+  "execMap": {
+    "js": "node --es_staging --debug=9001"
+  },
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "env": {
+    "PORT":9000,
+    "NODE_PATH":"."
+  },
+  "ext": "js"
+}
